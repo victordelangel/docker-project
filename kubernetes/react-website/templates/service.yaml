@@ -4,10 +4,10 @@ metadata:
   name: react-service
 spec:
   ports:
-    - port: 3000
+    - port: 80
       protocol: TCP
       targetPort: 3000
-      #name: react_port
+      name: http
   selector:
     app: react-website
-  type: ClusterIP
+  type: ExternalIP

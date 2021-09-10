@@ -23,7 +23,7 @@ spec:
               memory: 256Mi
           ports:
             - containerPort: 3000
-              name: reactport
+              #name: reactport
         - image: videlaacr.azurecr.io/backend:latest
           name: backend
           resources:
@@ -35,4 +35,4 @@ spec:
               memory: 256Mi
           ports:
             - containerPort: 3001
-              name: nodejsport
+              #name: nodejsport
