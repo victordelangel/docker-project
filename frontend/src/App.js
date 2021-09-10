@@ -1,7 +1,30 @@
+import React, {useEffect, useState} from 'react';
+import axios from 'axios';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+  const[response, setResponse] = useState('');
+
+  useEffect(() =>{
+    const API_URL =  process.env.REACT_APP_API_URL || 'localhost';
+    const API_PORT = process.env.REACT_APP_API_PORT || '3001';
+
+    const API_BASE_ADDRESS = `http://${API_URL}:${API_PORT}`
+
+    console.log('Request on address ', API_BASE_ADDRESS);
+
+    const fetchData = async () =>{
+      const result = await axios (`${API_BASE_ADDRESS}/test`);
+      setResponse(result.data);
+
+    };
+    fetchData();
+    return () => {};
+  },[]);
+
+
   return (
     <div className="App">
       <header className="App-header">
@@ -15,7 +38,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          The response is: {response} 
         </a>
       </header>
     </div>
