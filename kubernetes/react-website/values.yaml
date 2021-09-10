@@ -12,6 +12,9 @@ image:
   backend_port: 3001
   tag: latest
 
+dns:
+  name: 2df261e5fe9446d2b20d.eastus2.aksapp.io
+
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""

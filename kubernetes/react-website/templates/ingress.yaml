@@ -7,7 +7,7 @@ metadata:
     kubernetes.io/ingress.class: addon-http-application-routing
 spec:
   rules:
-    - host: react-website
+    - host: react-website.{{ .Values.dns.name }}
       http:
         paths:
           - backend:
