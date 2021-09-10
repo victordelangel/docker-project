@@ -24,15 +24,3 @@ spec:
           ports:
             - containerPort: {{ .Values.image.frontend_port }}
               #name: reactport
-        - image: {{ .Values.image.registry }}/{{ .Values.image.backend_name }}:{{ default "latest" .Values.image.tag }}
-          name: backend
-          resources:
-            requests:
-              cpu: 100m
-              memory: 128Mi
-            limits:
-              cpu: 250m
-              memory: 256Mi
-          ports:
-            - containerPort: {{ .Values.image.backend_port }}
-              #name: nodejsport
