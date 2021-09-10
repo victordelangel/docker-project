@@ -6,7 +6,7 @@ metadata:
     kubernetes.io/ingress.class: addon-http-application-routing
 spec:
   rules:
-    - host: react.{{ .Values.dns.name }}
+    - host: react.2df261e5fe9446d2b20d.eastus2.aksapp.io
       http:
         paths:
           - backend:
