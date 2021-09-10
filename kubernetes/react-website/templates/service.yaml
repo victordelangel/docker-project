@@ -10,4 +10,4 @@ spec:
       name: http
   selector:
     app: react-website
-  type: ExternalIP
+  type: ExternalName
