@@ -4,7 +4,7 @@ services:
   frontend:
     build:
       context: ./frontend
-    command: yarn start
+   
     volumes:
       - ./frontend/src:/usr/app/src
     ports:
@@ -18,7 +18,7 @@ services:
   api:
     build:
       context: ./backend
-    command: yarn start
+    
     volumes:
       - ./backend/src:/usr/app/src
     ports:
