@@ -9,9 +9,6 @@ image:
   name: frontend
   tag: latest
 
-service:
-  port: 80
-
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
