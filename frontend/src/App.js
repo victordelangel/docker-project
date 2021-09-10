@@ -38,7 +38,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          The response is: {response} 
+          La respuesta es: {response} SAT!
         </a>
       </header>
     </div>
