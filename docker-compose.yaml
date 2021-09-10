@@ -27,3 +27,4 @@ services:
       - PORT=3001
       - CORS_PORT=3000
       - CORS_URL=localhost
+ 
