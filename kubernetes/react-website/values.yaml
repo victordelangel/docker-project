@@ -6,7 +6,10 @@ replicaCount: 1
 
 image:
   registry: videlaacr.azurecr.io
-  name: frontend
+  frontend_name: frontend
+  frontend_port: 3000
+  backend_name: backend
+  backend_port: 3001
   tag: latest
 
 imagePullSecrets: []

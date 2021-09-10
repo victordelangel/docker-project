@@ -12,7 +12,7 @@ spec:
         app: react-website
     spec:
       containers:
-        - image: videlaacr.azurecr.io/frontend:latest
+        - image: {{ .Values.image.registry }}/{{ .Values.image.frontend_name }}:{{ default "latest" .Values.image.tag }}
           name: frontend
           resources:
             requests:
@@ -22,9 +22,9 @@ spec:
               cpu: 250m
               memory: 256Mi
           ports:
-            - containerPort: 3000
+            - containerPort: {{ .Values.image.frontend_port }}
               #name: reactport
-        - image: videlaacr.azurecr.io/backend:latest
+        - image: {{ .Values.image.registry }}/{{ .Values.image.backend_name }}:{{ default "latest" .Values.image.tag }}
           name: backend
           resources:
             requests:
@@ -34,5 +34,5 @@ spec:
               cpu: 250m
               memory: 256Mi
           ports:
-            - containerPort: 3001
+            - containerPort: {{ .Values.image.backend_port }}
               #name: nodejsport
