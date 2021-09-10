@@ -56,3 +56,12 @@ jobs:
             resource-group: AKS-DevOps
             # AKS cluster name
             cluster-name: videlaaks
+
+       - name: Run Helm Deploy
+         run: |
+            helm upgrade \
+              --install \
+              react-website \
+              ./kubernetes/react-website \
+              --set image.repository=${{ secrets.ACR_NAME }} \
+              --set dns.name=${{ secrets.DNS_NAME }}
