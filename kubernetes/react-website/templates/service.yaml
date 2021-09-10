@@ -7,7 +7,7 @@ spec:
     - port: 3000
       protocol: TCP
       targetPort: 3000
-      name: react_port
+      #name: react_port
   selector:
     app: react-website
   type: ClusterIP
