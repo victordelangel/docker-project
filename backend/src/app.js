@@ -14,7 +14,7 @@ const corsOption ={
     origin: CORS_ADDRESS,
 }
 
-
+ 
 app.get('/test', cors(corsOption),(request, response)=>{
 
     response.send("Hola equipo!");
